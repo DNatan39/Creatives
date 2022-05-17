@@ -1,0 +1,28 @@
+﻿Projet - Intégrer un site internet sans Bootstrap
+
+Objectifs : 
+
+Décomposer et attribuer les tâches avec Trello. Lorsqu'une personne prend une tâche elle doit estimer son temps. Lorsqu'elle a fini une tâche elle doit en prendre une autre. S'il n'y a plus de tâche à réaliser alors la personne aide un collègue ou fait du contrôle pour corriger les anomalies. Faire un point régulier sur l'avancer de votre projet et demander de l'aide si vous êtes en difficulté.
+
+Les plus : Vous pouvez ajouter des animations CSS ou JS si vous avez le temps
+
+L'intégration devra être faite SANS l'aide de Bootstrap.
+
+Durée : 5 jours
+
+Livrables : Projet sur Github + fichiers sur serveur
+
+Travail à réaliser par groupe de 2.
+
+Groupe : 
+
+Natan - Vola
+Antoine - Pauline
+Bernard - Julien
+Hamza - Jorge
+Vincent - Chris
+Karolos - Leo
+
+
+Date : 17/05/2022 au 23/05/2022
+
