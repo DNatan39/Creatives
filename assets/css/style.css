@@ -1,0 +1,317 @@
+@font-face {
+    src: url('../fonts/MyriadPro/Myriad\ Pro\ Regular.ttf');
+    font-family: "Myriad Pro";
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+body a {
+    font-family: 'Myriad Pro';
+    font-weight: lighter;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.none {
+    display: none !important;
+}
+
+#Nhamburger,
+#Nhamburger-content {
+    display: inline;
+}
+#Nhamburger{
+    width: 100%;
+    min-height: 100%;
+}
+
+#Nhamburger img {
+    width: 100%;
+    position: absolute;
+    z-index: -5000;
+    background-size: contain;
+}
+
+#Nhamburger-content {
+    width: 100%;
+    height: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    background: transparent;
+    border-bottom: 4px solid rgba(255, 255, 255, 0.10);
+}
+
+.Nacslogo {
+    width: 50px;
+    height: 50px;
+    background: #D21242;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    box-shadow: 9px 8px 0px -3px #F5F5F5;
+    margin-right: 10%;
+}
+
+.Nacslogo h2 {
+    font-family: 'Roboto', sans-serif;
+    color: #fff;
+    font-size: 20px;
+    user-select: none;
+}
+
+#Nhamburger-content ul {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: row;
+    padding: 0;
+    margin: 0;
+}
+
+#Nhamburger-content ul a {
+    text-decoration: none;
+    list-style: none;
+    color: #fff;
+    font-size: 20px;
+}
+
+#Nhamburger-content li:hover {
+    border-bottom: 5px solid #D21242;
+    transition: all 0.2s ease-out;
+}
+
+#Nhamburger-content li {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+}
+
+#Nhamburger-content nav {
+    width: 50%;
+    height: 100px;
+}
+
+#Nhamburger-content span {
+    width: 10%;
+    padding: 20px;
+}
+
+.NreseauNav1 a {
+    font-size: 20px;
+    padding: 10px;
+    text-decoration: none;
+    color: #F5F5F5;
+    text-align: center;
+}
+
+.NreseauNav1 a:hover {
+    color: #D21242;
+}
+
+#Nhamburger-button {
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: #D21242;
+    cursor: pointer;
+    background: none;
+    border: none;
+    font-size: 30px;
+    padding: 0;
+    margin: 20px;
+    vertical-align: top;
+    line-height: 47px;
+    float: right;
+    margin-right: 25px;
+    font-weight: bold;
+}
+
+#Nhamburger-button-close {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 10000000000;
+    color: #D21242;
+    cursor: pointer;
+    background: none;
+    border: none;
+    font-size: 30px;
+    padding: 0;
+    margin: 20px;
+    vertical-align: top;
+    line-height: 47px;
+    float: right;
+    margin-right: 25px;
+    font-weight: bold;
+}
+
+#Nhamburger-overlay {
+    display: none;
+    position: fixed;
+    z-index: 1000000000;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .4);
+}
+
+#Nhamburger-sidebar {
+    display: none;
+    position: fixed;
+    width: 100%;
+    z-index: 200000000000000000000000;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+    transform: translateX(-100%);
+    transition: transform 0.5s ease-out;
+}
+
+#Nhamburger-sidebar li {
+    display: block;
+    font-weight: bold;
+    font-size: 20px;
+    text-align: center;
+    margin: 5px;
+}
+
+#Nhamburger-sidebar ul {
+    margin-bottom: 20%;
+    padding: 0;
+}
+
+#Nhamburger-sidebar ul a {
+    color: #000000;
+    text-decoration: none;
+    letter-spacing: 1px;
+    margin: 10px;
+}
+
+#Nhamburger-sidebar-body {
+    padding: 16px 8px;
+}
+
+.NreseauNav {
+    display: none;
+}
+
+
+@media screen and (max-width: 1024px) {
+    #Nhamburger-content {
+        display: none;
+    }
+
+    #Nhamburger-button,
+    #Nhamburger-sidebar,
+    #Nhamburger-button-close,
+    .Nhamburger-activated #Nhamburger-overlay {
+        display: block;
+    }
+
+    #Nhamburger-button,
+    #Nhamburger-sidebar,
+    #Nhamburger-button-close,
+    .Nhamburger-activated,
+    #Nhamburger-overlay>i {
+        display: block;
+    }
+
+    #Nhamburger-button>i {
+        position: relative;
+        display: block;
+        height: 30px;
+    }
+
+    #Nhamburger-sidebar {
+        background-color: #222222;
+    }
+
+    .Nhamburger-activated #Nhamburger-sidebar {
+        transform: translateX(0);
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #Nhamburger-sidebar ul a {
+        color: #D21242;
+        text-decoration: none;
+        letter-spacing: 1px;
+        margin: 10px;
+    }
+
+    #Nhamburger-sidebar-body {
+        width: 60%;
+    }
+
+    #Nhamburger-button {
+        margin: 10px;
+        margin-right: 15px;
+    }
+
+    .NreseauNav1 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 20%;
+    }
+
+    .NreseauNav1 a {
+        width: 50px;
+        height: 50px;
+        font-size: 30px;
+        text-decoration: none;
+        color: #D21242;
+    }
+
+    .Nacslogo {
+        width: 100px;
+        height: 100px;
+        background: #D21242;
+        display: flex;
+        justify-content: center;
+        align-self: center;
+        box-shadow: 15px 15px 0px -4px #F5F5F5;
+        position: absolute;
+        top: 50px;
+        right: 255px;
+    }
+
+    .Nacslogo h2 {
+        font-family: 'Roboto', sans-serif;
+        color: #fff;
+        font-size: 20px;
+    }
+}
+
+
+@media screen and (max-width: 500px) {
+    #Nhamburger-button {
+        z-index: 5;
+        position: fixed;
+    }
+
+    .Nacslogo {
+        position: absolute;
+        top: 100px;
+        right: 27.5%;
+    }
+}

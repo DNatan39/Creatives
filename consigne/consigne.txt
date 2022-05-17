@@ -14,6 +14,13 @@ Livrables : Projet sur Github + fichiers sur serveur
 
 Travail à réaliser par groupe de 2.
 
+
+color : #D21242 (rouge)
+#F5F5F5 (blanc)
+#222222 (gris foncé)
+#F3F3F3 (blanc) akita inu
+#1E1E1E (footer)
+
 Groupe : 
 
 Natan - Vola
