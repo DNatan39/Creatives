@@ -21,3 +21,12 @@ buttonclose.addEventListener('click', function (e) {
     document.getElementById('Nhamburger').classList.remove(activatedClass);
     sidebarBody.classList.add('none');
 });
+
+
+// Loader
+
+window.onload = () => {
+    setTimeout(() => {
+      document.getElementById('Nparents').classList.add('none')
+    }, 2500);
+  }

@@ -37,6 +37,8 @@ body a {
 .none {
     display: none !important;
 }
+
+
 header{
     width: 100%;
     min-height: 100%;
@@ -346,9 +348,172 @@ header img {
     color: #fff;
 }
 
+/* Section AVANT LE FOOTER */
 
+#Nsectionavant{
+    width: 100%;
+    height: 35%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    background: #9d9d9d;
+    font-size: 15px;
+}
+#Nsectionavant p{
+    width: 55%;
+    font-family: "GothamBook";
+    margin: 0;
+    line-height: 25px;
+}
+#Nsectionavant img{
+    width: 7%;
+    margin: 20px;
+}
+.Navant{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
 
+footer{
+    width: 100%;
+    height: 15%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+    font-family: 'Roboto', sans-serif;
+    background-color: #222222;
+    color: #fff;
+    font-size: 15px;
+}
 
+/* LOADER */
+
+#Nparents{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    z-index: 5000000;
+    position: absolute;
+    width: 100%;
+    background: #D21242;
+}
+.container{
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container .ring{
+    position: relative;
+    width: 150px;
+    height: 150px;
+    margin: -30px;
+    border-radius: 50%;
+    border: 4px solid transparent;
+    border-top: 4px solid #9d9d9d;
+    animation: animate 4s linear infinite;
+}
+@keyframes animate{
+    0%
+    {
+        transform: rotate(0deg);
+    }
+    100%
+    {
+        transform: rotate(360deg);
+    }
+}
+
+.container .ring:before{
+    content: '';
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+    background: #9d9d9d;
+    box-shadow: 0 0 0 5px #9d9d9d33,
+    0 0 0 10px #9d9d9d22,
+    0 0 0 20px #9d9d9d11,
+    0 0 20px #9d9d9d,
+    0 0 50px #9d9d9d;
+}
+
+.container .ring:nth-child(2){
+    animation: animate2 4s linear infinite;
+    animation-delay: -1s;
+    border-top: 4px solid transparent;
+    border-left: 4px solid #F3F3F3;
+}
+.container .ring:nth-child(2):before{
+    content: '';
+    position: absolute;
+    top: initial;
+    bottom: 12px;
+    left: 12px;
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+    background: #F3F3F3;
+    box-shadow: 0 0 0 5px #F3F3F333,
+    0 0 0 10px #F3F3F322,
+    0 0 0 20px #F3F3F311,
+    0 0 20px #F3F3F3,
+    0 0 50px #F3F3F3;
+}
+
+@keyframes animate2{
+    0%
+    {
+        transform: rotate(360deg);
+    }
+    100%
+    {
+        transform: rotate(0deg);
+    }
+}
+
+.container .ring:nth-child(3){
+    animation: animate2 4s linear infinite;
+    animation-delay: -3s;
+    position: absolute;
+    top: -66.66px;
+    border-top: 4px solid transparent;
+    border-left: 4px solid #222222;
+}
+
+.container .ring:nth-child(3):before{
+    content: '';
+    position: absolute;
+    top: initial;
+    bottom: 12px;
+    left: 12px;
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+    background: #222222;
+    box-shadow: 0 0 0 5px #22222233,
+    0 0 0 10px #22222222,
+    0 0 0 20px #22222211,
+    0 0 20px #222222,
+    0 0 50px #222222;
+}
+
+.container p{
+    position: absolute;
+    color: #fff;
+    font-size: 1.5em;
+    font-family: "GothamMedium";
+    bottom: -100px;
+    letter-spacing: 0.15em;
+}
 
 
 @media screen and (max-width: 1024px) {
@@ -474,6 +639,9 @@ header img {
     .Ntitle h2{
         font-size: 6rem;
     }
+    .Ntitle p{
+        font-size: 15px;
+    }
 
     /* Section AGENCY */
 
@@ -490,6 +658,21 @@ header img {
     .Nfeature p{
         width: 80%;
     }
+
+    /* Section AVANT LE FOOTER */
+
+    #Nsectionavant p{
+        width: 80%;
+    }
+    #Nsectionavant img{
+        width: 10%;
+    }
+    .Navant{
+        flex-direction: column;
+        text-align: center;
+        font-size: 15px;
+        line-height: 20px;
+    }
 }
 
 
@@ -503,7 +686,9 @@ header img {
         background-image: url('../img/header/header.png');
         background-size: auto;
     }
+
     /* NAV BAR */
+
     #Nhamburger-button {
         z-index: 5;
         position: fixed;
@@ -525,11 +710,14 @@ header img {
         top: 100px;
         right: 27.5%;
     }
+
     /* Title + Scroll Down */
+
     .Ntitle h2{
         font-size: 3rem;
         top: 35%;
     }
+
     /* Section AGENCY */
 
     .Ntitleawesome{
@@ -539,8 +727,40 @@ header img {
         font-size: 160px;
     }
     .Ntitleawesome h2{
-        font-size: 25px;
+        font-size: 20px;
         text-align: center;
     }
 
+    #Nsection1{
+        padding: 10px 0 10px 0;
+    }
+
+    /* Section AVANT LE FOOTER */
+    #Nsectionavant{
+        height: 60%;
+        flex-direction: column;
+        padding: 10px 0 10px 0;
+    }
+    #Nsectionavant p{
+        width: 90%;
+    }
+    #Nsectionavant img{
+        width: 15%;
+    }
+    .Navant{
+        flex-direction: column;
+        text-align: center;
+        font-size: 15px;
+        line-height: 15px;
+    }
+
+    /* FOOTER */
+
+    footer{
+        height: 20%;
+        flex-direction: column;
+    }
+    footer p{
+        text-align: center;
+    }
 }
