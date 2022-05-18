@@ -68,7 +68,9 @@ header img {
     background: transparent;
     border-bottom: 4px solid rgba(255, 255, 255, 0.10);
 }
-
+.Nacslogo2{
+    display: none;
+}
 .Nacslogo {
     width: 50px;
     height: 50px;
@@ -409,8 +411,9 @@ header img {
     }
 
     #Nhamburger-button {
-        margin: 10px;
-        margin-right: 15px;
+        margin: 25px;
+        position: fixed;
+        color: #F3F3F3;
     }
 
     .NreseauNav1 {
@@ -427,6 +430,25 @@ header img {
         text-decoration: none;
         color: #D21242;
     }
+    .Nacslogo2{
+        display: block;
+        width: 100px;
+        height: 100px;
+        background: #D21242;
+        display: flex;
+        justify-content: center;
+        align-self: center;
+        box-shadow: 15px 15px 0px -4px #F5F5F5;
+        position: absolute;
+        top: 25px;
+        left: 25px
+    }
+    .Nacslogo2 h2 {
+        font-family: 'Roboto', sans-serif;
+        color: #fff;
+        font-size: 40px;
+    }
+
 
     .Nacslogo {
         width: 100px;
@@ -452,7 +474,22 @@ header img {
     .Ntitle h2{
         font-size: 6rem;
     }
-    
+
+    /* Section AGENCY */
+
+    .Ntitleawesome{
+        margin-top: 10%;
+    }
+    .Nfeatureparent{
+        display: grid;
+        gap: 30px;
+    }
+    .Nfeature h2{
+        text-align: center;
+    }
+    .Nfeature p{
+        width: 80%;
+    }
 }
 
 
@@ -470,6 +507,17 @@ header img {
     #Nhamburger-button {
         z-index: 5;
         position: fixed;
+        color: #F3F3F3;
+    }
+
+    .Nacslogo2{
+        width: 80px;
+        height: 80px;
+    }
+    .Nacslogo2 h2 {
+        font-family: 'Roboto', sans-serif;
+        color: #fff;
+        font-size: 30px;
     }
 
     .Nacslogo {
@@ -481,6 +529,18 @@ header img {
     .Ntitle h2{
         font-size: 3rem;
         top: 35%;
+    }
+    /* Section AGENCY */
+
+    .Ntitleawesome{
+        margin-top: 5%;
+    }
+    .Ntitleawesome h1{
+        font-size: 160px;
+    }
+    .Ntitleawesome h2{
+        font-size: 25px;
+        text-align: center;
     }
 
 }
