@@ -1,11 +1,37 @@
-*{
+@font-face {
+    src: url('../fonts/MyriadPro/Myriad\ Pro\ Regular.ttf');
+    font-family: "Myriad Pro";
+}
+
+@font-face {
+    src: url('../fonts/Gotham/GothamBold.ttf');
+    font-family: "Gotham";
+}
+
+@font-face {
+    font-family: "GothamBook";
+    src: url('../fonts/Gotham/GothamBook.ttf');
+}
+
+@font-face {
+    font-family: "GothamMedium";
+    src: url('../fonts/Gotham/GothamMedium_1.ttf');
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+
+
+
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
 
+/* Section avec les 2 images */
 
-#Tsection{
+#Tsection {
     width: 100%;
     min-height: 100vh;
     display: flex;
@@ -14,75 +40,121 @@
     align-items: center;
     flex-direction: column;
 }
-.Tdiv1{
+
+.Tdiv1 {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: row-reverse;
     background-color: #222222;
 }
-.Tdiv1 div{
+
+.Tdiv1 div {
     width: 50%;
     color: white;
     text-align: left;
 }
-.Tdiv1 div .Tpara{
+
+.Tdiv1 div .Tpara {
     margin: 0;
     margin-left: 20%;
+    font-family: "GothamBook";
 }
-.Tdiv1 div p{
+
+.Tdiv1 div p {
     width: 50%;
     color: white;
     text-align: left;
     margin: 5%;
     margin-left: 20%;
+    font-family: "GothamBook";
 }
-.Tdiv1 div h2{
+
+.Tdiv1 div h2 {
     width: 50%;
     color: white;
     text-align: left;
     margin-left: 20%;
+    font-family: "GothamMedium";
 }
-.Tdiv1 img{
+
+.Tdiv1 img {
     width: 50%;
 }
 
-.Tdiv2{
+.Tdiv2 {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: row;
     background-color: #f3f3f3;
 }
-.Tdiv2 div{
+
+.Tdiv2 div {
     width: 50%;
     color: white;
     text-align: left;
 }
-.Tdiv2 div .Tpara{
+
+.Tdiv2 div .Tpara {
     margin: 0;
     margin-left: 10%;
+    font-family: "GothamBook";
 }
-.Tdiv2 div p{
+
+.Tdiv2 div p {
     width: 50%;
     color: rgb(0, 0, 0);
     text-align: left;
     margin: 5%;
     margin-left: 10%;
     margin-right: 20%;
+    font-family: "GothamBook";
 }
-.Tdiv2 div h2{
+
+.Tdiv2 div h2 {
     width: 50%;
     color: rgb(0, 0, 0);
     text-align: left;
     margin-left: 10%;
     margin-right: 20%;
+    font-family: "GothamMedium";
 }
-.Tdiv2 img{
+
+.Tdiv2 img {
     width: 50%;
 }
 
-#sectionBlog{
+
+/* SECTION BLOG */
+.titleBlog {
+    display: grid;
+    place-items: center;
+}
+
+.titleBlog h1 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 200px;
+    color: #da3d64;
+    position: relative;
+    margin: 0;
+}
+
+.titleBlog h2 {
+    font-family: "GothamMedium";
+    font-size: 30px;
+    font-weight: 400;
+    position: absolute;
+    margin: 0;
+}
+
+.blog p {
+    font-size: 20px;
+    font-family: "GothamBook";
+    font-weight: 700;
+}
+
+#sectionBlog {
     width: 100%;
     min-height: 100vh;
     display: flex;
@@ -90,56 +162,102 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    margin-left: 5%;
+    padding: 0 5% 0 5%;
 }
-.fresh{
+
+.fresh {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: row;
     margin-top: 5%;
-    margin-left: 5%;
-    margin-right: 15%
-    
-
 }
-.boxFresh{
+
+.boxFresh {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    gap: 20px;
 }
-.boxFresh p{
+
+.boxFresh p {
     color: black;
     align-items: left;
     text-align: center;
     margin-top: 5%;
-    width: 90%;
-   
-    
+    width: 70%;
+    font-family: "GothamBook";
+    line-height: 25px;
 }
+
 .boxFresh h3 {
-    color: red;
+    color: #da3d64;
     align-items: right;
     text-align: center;
+    font-family: "GothamMedium";
+    font-weight: lighter;
     margin-top: 5%;
     width: 75%;
 }
 
 
+
+
+
+
 /* TABLETTE */
 @media screen and (max-width: 1024px) {
     .Tdiv1{
-        background-color: red;
+        flex-direction: column;
     }
+    .Tdiv2{
+        flex-direction: column;
+    }
+    .Tdiv1 img{
+        width: 100%;
+    }
+    .Tdiv1 div p {
+        width: 100%;
+        margin: 0;
+        text-align: center;
+        padding-bottom: 20px;
+    }
+    .Tdiv1 div .Tpara{
+        margin: 0;
+        padding-top: 20px;
+    }
+    .Tdiv1 div h2{
+        width: 100%;
+        text-align: center;
+        margin: 0;
+        padding: 20px 0 20px 0;
+    }
+    .Tdiv2 div p {
+        width: 100%;
+        margin: 0;
+        text-align: center;
+        padding-bottom: 20px;
+    }
+    .Tdiv2 div .Tpara{
+        margin: 0;
+        padding-top: 20px;
+    }
+    .Tdiv2 img{
+        width: 100%;
+    }
+    .Tdiv2 div h2{
+        width: 100%;
+        text-align: center;
+        margin: 0;
+        padding: 20px 0 20px 0;
+    }
+    
+    
 }
 
 
 /* MOBILE */
 @media screen and (max-width: 500px) {
-    .Tdiv1{
-        background-color: red;
-    }
+    
 }
-
-
