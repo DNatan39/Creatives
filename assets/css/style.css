@@ -1,0 +1,101 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+#Tsection{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    margin: 5px 0 5px 0;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.Tdiv1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row-reverse;
+    background-color: #222222;
+}
+.Tdiv1 div{
+    width: 50%;
+    color: white;
+    text-align: left;
+}
+.Tdiv1 div .Tpara{
+    margin: 0;
+    margin-left: 20%;
+}
+.Tdiv1 div p{
+    width: 50%;
+    color: white;
+    text-align: left;
+    margin: 5%;
+    margin-left: 20%;
+}
+.Tdiv1 div h2{
+    width: 50%;
+    color: white;
+    text-align: left;
+    margin-left: 20%;
+}
+.Tdiv1 img{
+    width: 50%;
+}
+
+.Tdiv2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    background-color: #f3f3f3;
+}
+.Tdiv2 div{
+    width: 50%;
+    color: white;
+    text-align: left;
+}
+.Tdiv2 div .Tpara{
+    margin: 0;
+    margin-left: 10%;
+}
+.Tdiv2 div p{
+    width: 50%;
+    color: rgb(0, 0, 0);
+    text-align: left;
+    margin: 5%;
+    margin-left: 10%;
+    margin-right: 20%;
+}
+.Tdiv2 div h2{
+    width: 50%;
+    color: rgb(0, 0, 0);
+    text-align: left;
+    margin-left: 10%;
+    margin-right: 20%;
+}
+.Tdiv2 img{
+    width: 50%;
+}
+
+
+/* TABLETTE */
+@media screen and (max-width: 1024px) {
+    .Tdiv1{
+        background-color: red;
+    }
+}
+
+
+/* MOBILE */
+@media screen and (max-width: 500px) {
+    .Tdiv1{
+        background-color: red;
+    }
+}
+
+
