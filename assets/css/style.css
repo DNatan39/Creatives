@@ -269,6 +269,10 @@ header img {
 .Ntitle i{
     font-size: 20px;
     color: white;
+    padding: 10px;
+}
+.Ntitle i:hover{
+    color: #D21242;
 }
 .Ntitle a{
     position: absolute;
@@ -286,6 +290,8 @@ header img {
 }
 .Ntitle a:hover{
     transform: rotate(180deg);
+    color: #D21242;
+    border: 1px solid #D21242;
 }
 
 /* Section AGENCY */
@@ -393,13 +399,14 @@ footer{
 /* LOADER */
 
 #Nparents{
+    width: 100%;
+    height: 100vh;
+    position: fixed;
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    z-index: 5000000;
-    position: absolute;
-    width: 100%;
+    z-index: 500000000000;
     background: #D21242;
 }
 .container{
@@ -517,12 +524,18 @@ footer{
 
 
 @media screen and (max-width: 1024px) {
+
+    /* HEADER */
+
     header img{
         display: none;
     }
     header{
         background-image: url('../img/header/header.png');
         background-size: auto;
+    }
+    .Ntitle h2 {
+        top: 35%;
     }
 
     /* NAV BAR */
@@ -679,12 +692,18 @@ footer{
 
 
 @media screen and (max-width: 500px) {
+
+    /* HEADER */
+
     header img{
         display: none;
     }
     header{
         background-image: url('../img/header/header.png');
         background-size: auto;
+    }
+    .Ntitle h2 {
+        top: 40%;
     }
 
     /* NAV BAR */
@@ -736,10 +755,11 @@ footer{
     }
 
     /* Section AVANT LE FOOTER */
+
     #Nsectionavant{
         height: 60%;
         flex-direction: column;
-        padding: 10px 0 10px 0;
+        padding: 0px 0 15px 0;
     }
     #Nsectionavant p{
         width: 90%;
