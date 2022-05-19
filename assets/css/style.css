@@ -35,7 +35,6 @@
     width: 100%;
     min-height: 100vh;
     display: flex;
-    margin: 5px 0 5px 0;
     justify-content: center;
     align-items: center;
     flex-direction: column;
@@ -48,19 +47,15 @@
     flex-direction: row-reverse;
     background-color: #222222;
 }
-
 .Tdiv1 div {
     width: 50%;
-    color: white;
-    text-align: left;
 }
-
 .Tdiv1 div .Tpara {
+    width: 50%;
     margin: 0;
     margin-left: 20%;
     font-family: "GothamBook";
 }
-
 .Tdiv1 div p {
     width: 50%;
     color: white;
@@ -69,7 +64,6 @@
     margin-left: 20%;
     font-family: "GothamBook";
 }
-
 .Tdiv1 div h2 {
     width: 50%;
     color: white;
@@ -77,10 +71,10 @@
     margin-left: 20%;
     font-family: "GothamMedium";
 }
-
 .Tdiv1 img {
     width: 50%;
 }
+
 
 .Tdiv2 {
     display: flex;
@@ -89,19 +83,15 @@
     flex-direction: row;
     background-color: #f3f3f3;
 }
-
 .Tdiv2 div {
     width: 50%;
-    color: white;
-    text-align: left;
 }
-
 .Tdiv2 div .Tpara {
+    width: 50%;
     margin: 0;
     margin-left: 10%;
     font-family: "GothamBook";
 }
-
 .Tdiv2 div p {
     width: 50%;
     color: rgb(0, 0, 0);
@@ -111,7 +101,6 @@
     margin-right: 20%;
     font-family: "GothamBook";
 }
-
 .Tdiv2 div h2 {
     width: 50%;
     color: rgb(0, 0, 0);
@@ -120,13 +109,24 @@
     margin-right: 20%;
     font-family: "GothamMedium";
 }
-
 .Tdiv2 img {
     width: 50%;
 }
 
 
 /* SECTION BLOG */
+
+#sectionBlog {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    margin: 5px 0 5px 0;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 0 5% 0 5%;
+}
+
 .titleBlog {
     display: grid;
     place-items: center;
@@ -152,17 +152,6 @@
     font-size: 20px;
     font-family: "GothamBook";
     font-weight: 700;
-}
-
-#sectionBlog {
-    width: 100%;
-    min-height: 100vh;
-    display: flex;
-    margin: 5px 0 5px 0;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    padding: 0 5% 0 5%;
 }
 
 .fresh {
@@ -193,7 +182,6 @@
 
 .boxFresh h3 {
     color: #da3d64;
-    align-items: right;
     text-align: center;
     font-family: "GothamMedium";
     font-weight: lighter;
@@ -207,57 +195,114 @@
 
 
 /* TABLETTE */
+
 @media screen and (max-width: 1024px) {
+
+    /* SECTION 1 AVEC LES DEUX PHOTOS */
+
     .Tdiv1{
+        align-items: center;
         flex-direction: column;
     }
-    .Tdiv2{
-        flex-direction: column;
+    .Tdiv1 div{
+        width: 100%;
     }
     .Tdiv1 img{
         width: 100%;
     }
     .Tdiv1 div p {
-        width: 100%;
-        margin: 0;
-        text-align: center;
+        width: 50%;
+        margin: 5% 25% 0% 25%;
         padding-bottom: 20px;
+        text-align: center;
+        font-size: 14px;
+        line-height: 20px;
     }
     .Tdiv1 div .Tpara{
+        width: 100%;
         margin: 0;
         padding-top: 20px;
     }
     .Tdiv1 div h2{
         width: 100%;
-        text-align: center;
         margin: 0;
         padding: 20px 0 20px 0;
-    }
-    .Tdiv2 div p {
-        width: 100%;
-        margin: 0;
         text-align: center;
-        padding-bottom: 20px;
     }
-    .Tdiv2 div .Tpara{
-        margin: 0;
-        padding-top: 20px;
+
+    .Tdiv2{
+        align-items: center;
+        flex-direction: column;
+    }
+    .Tdiv2 div{
+        width: 100%;
     }
     .Tdiv2 img{
         width: 100%;
     }
+    .Tdiv2 div p {
+        width: 50%;
+        margin: 5% 25% 0% 25%;
+        padding-bottom: 20px;
+        text-align: center;
+        font-size: 14px;
+        line-height: 20px;
+    }
+    .Tdiv2 div .Tpara{
+        width: 100%;
+        margin: 0;
+        padding-top: 20px;
+    }
     .Tdiv2 div h2{
         width: 100%;
-        text-align: center;
         margin: 0;
         padding: 20px 0 20px 0;
+        text-align: center;
     }
-    
-    
+
+
+    /* SECTION 2 AVEC 4 ARTICLES */
+
+    .fresh{
+        flex-direction: column;
+    }
+    .boxFresh{
+        padding-bottom: 30px;
+    }
+    .boxFresh img{
+        width: 65%;
+    }
 }
 
 
 /* MOBILE */
+
 @media screen and (max-width: 500px) {
-    
+
+    /* SECTION 1 AVEC LES DEUX PHOTOS */
+
+    .Tdiv1 div p {
+        width: 100%;
+        padding: 0 5% 5% 5%;
+        margin: 0;
+        font-size: 14px;
+    }
+    .Tdiv2 div p {
+        width: 100%;
+        padding: 0 5% 5% 5%;
+        margin: 0;
+        font-size: 14px;
+    }
+
+    /* SECTION 2 AVEC LES 4 ARTICLES */
+
+        .blog p {
+            text-align: center;
+        }
+        .boxFresh{
+            padding-bottom: 15px;
+        }
+        .boxFresh img{
+            width: 70%;
+        }
 }
