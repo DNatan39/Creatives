@@ -2,31 +2,526 @@
     src: url('../fonts/MyriadPro/Myriad\ Pro\ Regular.ttf');
     font-family: "Myriad Pro";
 }
-
 @font-face {
     src: url('../fonts/Gotham/GothamBold.ttf');
     font-family: "Gotham";
 }
-
 @font-face {
     font-family: "GothamBook";
     src: url('../fonts/Gotham/GothamBook.ttf');
 }
-
 @font-face {
     font-family: "GothamMedium";
     src: url('../fonts/Gotham/GothamMedium_1.ttf');
-}
-
+  
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
 
+body {
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
 
+body a {
+    font-family: 'Myriad Pro';
+    font-weight: lighter;
+}
 
 * {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+.none {
+    display: none !important;
+}
+
+
+header{
+    width: 100%;
+    min-height: 100%;
+}
+header img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: -5000;
+}
+
+/* NAV BAR */
+
+#Nhamburger,
+#Nhamburger-content {
+    display: inline;
+}
+#Nhamburger{
+    width: 100%;
+    min-height: 100%;
+}
+
+#Nhamburger-content {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+    border-bottom: 4px solid rgba(255, 255, 255, 0.10);
+}
+.Nacslogo2{
+    display: none;
+}
+.Nacslogo {
+    width: 50px;
+    height: 50px;
+    background: #D21242;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    box-shadow: 9px 8px 0px -3px #F5F5F5;
+    margin-right: 10%;
+}
+
+.Nacslogo h2 {
+    font-family: 'Roboto', sans-serif;
+    color: #fff;
+    font-size: 20px;
+    user-select: none;
+}
+
+#Nhamburger-content ul {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: row;
     padding: 0;
     margin: 0;
-    box-sizing: border-box;
+}
+
+#Nhamburger-content ul a {
+    text-decoration: none;
+    list-style: none;
+    color: #fff;
+    font-size: 20px;
+}
+
+#Nhamburger-content li:hover {
+    border-bottom: 5px solid #D21242;
+    transition: all 0.2s ease-out;
+}
+
+#Nhamburger-content li {
+    height: 109%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+}
+
+#Nhamburger-content nav {
+    width: 50%;
+    height: 100px;
+}
+
+#Nhamburger-content span {
+    width: 10%;
+    padding: 20px;
+}
+
+.NreseauNav1 a {
+    font-size: 20px;
+    padding: 10px;
+    text-decoration: none;
+    color: #F5F5F5;
+    text-align: center;
+}
+
+.NreseauNav1 a:hover {
+    color: #D21242;
+}
+
+#Nhamburger-button {
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: #D21242;
+    cursor: pointer;
+    background: none;
+    border: none;
+    font-size: 30px;
+    padding: 0;
+    margin: 20px;
+    vertical-align: top;
+    line-height: 47px;
+    float: right;
+    margin-right: 25px;
+    font-weight: bold;
+}
+
+#Nhamburger-button-close {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 10000000000;
+    color: #D21242;
+    cursor: pointer;
+    background: none;
+    border: none;
+    font-size: 30px;
+    padding: 0;
+    margin: 20px;
+    vertical-align: top;
+    line-height: 47px;
+    float: right;
+    margin-right: 25px;
+    font-weight: bold;
+}
+
+#Nhamburger-overlay {
+    display: none;
+    position: fixed;
+    z-index: 1000000000;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .4);
+}
+
+#Nhamburger-sidebar {
+    display: none;
+    position: fixed;
+    width: 100%;
+    z-index: 200000000000000000000000;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+    transform: translateX(-100%);
+    transition: transform 0.5s ease-out;
+}
+
+#Nhamburger-sidebar li {
+    display: block;
+    font-weight: bold;
+    font-size: 20px;
+    text-align: center;
+    margin: 5px;
+}
+
+#Nhamburger-sidebar ul {
+    margin-bottom: 20%;
+    padding: 0;
+}
+
+#Nhamburger-sidebar ul a {
+    color: #000000;
+    text-decoration: none;
+    letter-spacing: 1px;
+    margin: 10px;
+}
+
+#Nhamburger-sidebar-body {
+    padding: 16px 8px;
+}
+
+.NreseauNav {
+    display: none;
+}
+
+
+
+/* Title + Scroll Down */
+
+.Ntitle{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: 80px;
+    color: #f5f5f5;
+    z-index: -2;
+}
+.Ntitle h2{
+    font-family: "Gotham";
+    font-size: 10rem;
+    position: absolute;
+    top: 25%;
+}
+.Ntitle p{
+    font-size: 13px;
+    line-height: 22px;
+    color: #ffffff;
+    font-weight: 400;
+    font-family: 'Open Sans';
+    text-align: center;
+    position: absolute;
+    bottom: 130px;
+}
+.Ntitle i{
+    font-size: 20px;
+    color: white;
+    padding: 10px;
+}
+.Ntitle i:hover{
+    color: #D21242;
+}
+.Ntitle a{
+    position: absolute;
+    bottom: 80px;
+    border: 1px solid #fff;
+    padding: 20px;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.2s ease-in-out;
+    text-decoration: none;
+}
+.Ntitle a:hover{
+    transform: rotate(180deg);
+    color: #D21242;
+    border: 1px solid #D21242;
+}
+
+/* Section AGENCY */
+
+#Nsection1{
+    width: 100%;
+    min-height: 100%;
+    background: #D21242;
+    color: #fff;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+}
+.Ntitleawesome{
+    display: grid;
+    place-items: center;
+}
+.Ntitleawesome h1{
+    font-family: 'Roboto', sans-serif;
+    font-size: 200px;
+    color: #da3d64;
+    position: relative;
+    margin: 0;
+}
+
+.Ntitleawesome h2{
+    font-family: "GothamBook";
+    font-size: 30px;
+    font-weight: 500;
+    position: absolute;
+}
+.Nfeatureparent{
+    width:80%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.Nfeature{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.Nfeature p{
+    width: 80%;
+    font-family: "GothamBook";
+    font-size: 15px;
+    line-height: 25px;
+    text-align: center;
+}
+.Nfeature h2{
+    font-family: "GothamMedium";
+    font-weight: 400;
+    font-size: 18px;
+    margin-top: 30px;
+}
+.Nfeature i{
+    font-size: 50px;
+    color: #fff;
+}
+
+/* Section AVANT LE FOOTER */
+
+#Nsectionavant{
+    width: 100%;
+    height: 35%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    background: #9d9d9d;
+    font-size: 15px;
+}
+#Nsectionavant p{
+    width: 55%;
+    font-family: "GothamBook";
+    margin: 0;
+    line-height: 25px;
+}
+#Nsectionavant img{
+    width: 7%;
+    margin: 20px;
+}
+.Navant{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    margin-top: 5%;
+}
+
+footer{
+    width: 100%;
+    height: 15%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+    font-family: 'Roboto', sans-serif;
+    background-color: #222222;
+    color: #fff;
+    font-size: 15px;
+}
+
+/* LOADER */
+
+#Nparents{
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    z-index: 500000000000;
+    background: #D21242;
+}
+.container{
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container .ring{
+    position: relative;
+    width: 150px;
+    height: 150px;
+    margin: -30px;
+    border-radius: 50%;
+    border: 4px solid transparent;
+    border-top: 4px solid #9d9d9d;
+    animation: animate 4s linear infinite;
+}
+@keyframes animate{
+    0%
+    {
+        transform: rotate(0deg);
+    }
+    100%
+    {
+        transform: rotate(360deg);
+    }
+}
+
+.container .ring:before{
+    content: '';
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+    background: #9d9d9d;
+    box-shadow: 0 0 0 5px #9d9d9d33,
+    0 0 0 10px #9d9d9d22,
+    0 0 0 20px #9d9d9d11,
+    0 0 20px #9d9d9d,
+    0 0 50px #9d9d9d;
+}
+
+.container .ring:nth-child(2){
+    animation: animate2 4s linear infinite;
+    animation-delay: -1s;
+    border-top: 4px solid transparent;
+    border-left: 4px solid #F3F3F3;
+}
+.container .ring:nth-child(2):before{
+    content: '';
+    position: absolute;
+    top: initial;
+    bottom: 12px;
+    left: 12px;
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+    background: #F3F3F3;
+    box-shadow: 0 0 0 5px #F3F3F333,
+    0 0 0 10px #F3F3F322,
+    0 0 0 20px #F3F3F311,
+    0 0 20px #F3F3F3,
+    0 0 50px #F3F3F3;
+}
+
+@keyframes animate2{
+    0%
+    {
+        transform: rotate(360deg);
+    }
+    100%
+    {
+        transform: rotate(0deg);
+    }
+}
+
+.container .ring:nth-child(3){
+    animation: animate2 4s linear infinite;
+    animation-delay: -3s;
+    position: absolute;
+    top: -66.66px;
+    border-top: 4px solid transparent;
+    border-left: 4px solid #222222;
+}
+
+.container .ring:nth-child(3):before{
+    content: '';
+    position: absolute;
+    top: initial;
+    bottom: 12px;
+    left: 12px;
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+    background: #222222;
+    box-shadow: 0 0 0 5px #22222233,
+    0 0 0 10px #22222222,
+    0 0 0 20px #22222211,
+    0 0 20px #222222,
+    0 0 50px #222222;
+}
+
+.container p{
+    position: absolute;
+    color: #fff;
+    font-size: 1.5em;
+    font-family: "GothamMedium";
+    bottom: -100px;
+    letter-spacing: 0.15em;
 }
 
 /* Section avec les 2 images */
@@ -113,7 +608,6 @@
     width: 50%;
 }
 
-
 /* SECTION BLOG */
 
 #sectionBlog {
@@ -162,6 +656,7 @@
     margin-top: 5%;
 }
 
+
 .boxFresh {
     display: flex;
     flex-direction: column;
@@ -190,14 +685,172 @@
 }
 
 
-
-
-
-
 /* TABLETTE */
-
+  
 @media screen and (max-width: 1024px) {
 
+    /* HEADER */
+
+    header img{
+        display: none;
+    }
+    header{
+        background-image: url('../img/header/header.png');
+        background-size: auto;
+    }
+    .Ntitle h2 {
+        top: 35%;
+    }
+
+    /* NAV BAR */
+
+    #Nhamburger-content {
+        display: none;
+    }
+
+    #Nhamburger-button,
+    #Nhamburger-sidebar,
+    #Nhamburger-button-close,
+    .Nhamburger-activated #Nhamburger-overlay {
+        display: block;
+    }
+
+    #Nhamburger-button,
+    #Nhamburger-sidebar,
+    #Nhamburger-button-close,
+    .Nhamburger-activated,
+    #Nhamburger-overlay>i {
+        display: block;
+    }
+
+    #Nhamburger-button>i {
+        position: relative;
+        display: block;
+        height: 30px;
+    }
+
+    #Nhamburger-sidebar {
+        background-color: #222222;
+    }
+
+    .Nhamburger-activated #Nhamburger-sidebar {
+        transform: translateX(0);
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #Nhamburger-sidebar ul a {
+        color: #D21242;
+        text-decoration: none;
+        letter-spacing: 1px;
+        margin: 10px;
+    }
+
+    #Nhamburger-sidebar-body {
+        width: 60%;
+    }
+
+    #Nhamburger-button {
+        margin: 25px;
+        position: fixed;
+        color: #F3F3F3;
+    }
+
+    .NreseauNav1 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 20%;
+    }
+
+    .NreseauNav1 a {
+        width: 50px;
+        height: 50px;
+        font-size: 30px;
+        text-decoration: none;
+        color: #D21242;
+    }
+    .Nacslogo2{
+        display: block;
+        width: 100px;
+        height: 100px;
+        background: #D21242;
+        display: flex;
+        justify-content: center;
+        align-self: center;
+        box-shadow: 15px 15px 0px -4px #F5F5F5;
+        position: absolute;
+        top: 25px;
+        left: 25px
+    }
+    .Nacslogo2 h2 {
+        font-family: 'Roboto', sans-serif;
+        color: #fff;
+        font-size: 40px;
+    }
+
+
+    .Nacslogo {
+        width: 100px;
+        height: 100px;
+        background: #D21242;
+        display: flex;
+        justify-content: center;
+        align-self: center;
+        box-shadow: 15px 15px 0px -4px #F5F5F5;
+        position: absolute;
+        top: 100px;
+        right: 255px;
+    }
+
+    .Nacslogo h2 {
+        font-family: 'Roboto', sans-serif;
+        color: #fff;
+        font-size: 40px;
+    }
+
+    /* Title + Scroll Down */
+
+    .Ntitle h2{
+        font-size: 6rem;
+    }
+    .Ntitle p{
+        font-size: 15px;
+    }
+
+    /* Section AGENCY */
+
+    .Ntitleawesome{
+        margin-top: 10%;
+    }
+    .Nfeatureparent{
+        display: grid;
+        gap: 30px;
+    }
+    .Nfeature h2{
+        text-align: center;
+    }
+    .Nfeature p{
+        width: 80%;
+    }
+
+    /* Section AVANT LE FOOTER */
+
+    #Nsectionavant p{
+        width: 80%;
+    }
+    #Nsectionavant img{
+        width: 10%;
+    }
+    .Navant{
+        flex-direction: column;
+        text-align: center;
+        font-size: 15px;
+        line-height: 20px;
+    }
+  
     /* SECTION 1 AVEC LES DEUX PHOTOS */
 
     .Tdiv1{
@@ -279,7 +932,68 @@
 
 @media screen and (max-width: 500px) {
 
-    /* SECTION 1 AVEC LES DEUX PHOTOS */
+    /* HEADER */
+
+    header img{
+        display: none;
+    }
+    header{
+        background-image: url('../img/header/header.png');
+        background-size: auto;
+    }
+    .Ntitle h2 {
+        top: 40%;
+    }
+
+    /* NAV BAR */
+
+    #Nhamburger-button {
+        z-index: 5;
+        position: fixed;
+        color: #F3F3F3;
+    }
+
+    .Nacslogo2{
+        width: 80px;
+        height: 80px;
+    }
+    .Nacslogo2 h2 {
+        font-family: 'Roboto', sans-serif;
+        color: #fff;
+        font-size: 30px;
+    }
+
+    .Nacslogo {
+        position: absolute;
+        top: 100px;
+        right: 27.5%;
+    }
+
+    /* Title + Scroll Down */
+
+    .Ntitle h2{
+        font-size: 3rem;
+        top: 35%;
+    }
+
+    /* Section AGENCY */
+
+    .Ntitleawesome{
+        margin-top: 5%;
+    }
+    .Ntitleawesome h1{
+        font-size: 160px;
+    }
+    .Ntitleawesome h2{
+        font-size: 20px;
+        text-align: center;
+    }
+
+    #Nsection1{
+        padding: 10px 0 10px 0;
+    }
+  
+  /* SECTION 1 AVEC LES DEUX PHOTOS */
 
     .Tdiv1 div p {
         width: 100%;
@@ -296,13 +1010,43 @@
 
     /* SECTION 2 AVEC LES 4 ARTICLES */
 
-        .blog p {
-            text-align: center;
-        }
-        .boxFresh{
-            padding-bottom: 15px;
-        }
-        .boxFresh img{
-            width: 70%;
-        }
+    .blog p {
+        text-align: center;
+    }
+    .boxFresh{
+        padding-bottom: 15px;
+    }
+    .boxFresh img{
+        width: 70%;
+    }
+
+    /* Section AVANT LE FOOTER */
+
+    #Nsectionavant{
+        height: 60%;
+        flex-direction: column;
+        padding: 0px 0 15px 0;
+    }
+    #Nsectionavant p{
+        width: 90%;
+    }
+    #Nsectionavant img{
+        width: 15%;
+    }
+    .Navant{
+        flex-direction: column;
+        text-align: center;
+        font-size: 15px;
+        line-height: 15px;
+    }
+
+    /* FOOTER */
+
+    footer{
+        height: 20%;
+        flex-direction: column;
+    }
+    footer p{
+        text-align: center;
+    }
 }
