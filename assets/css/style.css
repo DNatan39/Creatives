@@ -13,7 +13,7 @@
 @font-face {
     font-family: "GothamMedium";
     src: url('../fonts/Gotham/GothamMedium_1.ttf');
-}
+  
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
 
@@ -317,6 +317,7 @@ header img {
     position: relative;
     margin: 0;
 }
+
 .Ntitleawesome h2{
     font-family: "GothamBook";
     font-size: 30px;
@@ -381,6 +382,7 @@ header img {
     justify-content: center;
     align-items: center;
     flex-direction: row;
+    margin-top: 5%;
 }
 
 footer{
@@ -522,7 +524,169 @@ footer{
     letter-spacing: 0.15em;
 }
 
+/* Section avec les 2 images */
 
+#Tsection {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.Tdiv1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row-reverse;
+    background-color: #222222;
+}
+.Tdiv1 div {
+    width: 50%;
+}
+.Tdiv1 div .Tpara {
+    width: 50%;
+    margin: 0;
+    margin-left: 20%;
+    font-family: "GothamBook";
+}
+.Tdiv1 div p {
+    width: 50%;
+    color: white;
+    text-align: left;
+    margin: 5%;
+    margin-left: 20%;
+    font-family: "GothamBook";
+}
+.Tdiv1 div h2 {
+    width: 50%;
+    color: white;
+    text-align: left;
+    margin-left: 20%;
+    font-family: "GothamMedium";
+}
+.Tdiv1 img {
+    width: 50%;
+}
+
+
+.Tdiv2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    background-color: #f3f3f3;
+}
+.Tdiv2 div {
+    width: 50%;
+}
+.Tdiv2 div .Tpara {
+    width: 50%;
+    margin: 0;
+    margin-left: 10%;
+    font-family: "GothamBook";
+}
+.Tdiv2 div p {
+    width: 50%;
+    color: rgb(0, 0, 0);
+    text-align: left;
+    margin: 5%;
+    margin-left: 10%;
+    margin-right: 20%;
+    font-family: "GothamBook";
+}
+.Tdiv2 div h2 {
+    width: 50%;
+    color: rgb(0, 0, 0);
+    text-align: left;
+    margin-left: 10%;
+    margin-right: 20%;
+    font-family: "GothamMedium";
+}
+.Tdiv2 img {
+    width: 50%;
+}
+
+/* SECTION BLOG */
+
+#sectionBlog {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    margin: 5px 0 5px 0;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 0 5% 0 5%;
+}
+
+.titleBlog {
+    display: grid;
+    place-items: center;
+}
+
+.titleBlog h1 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 200px;
+    color: #da3d64;
+    position: relative;
+    margin: 0;
+}
+
+.titleBlog h2 {
+    font-family: "GothamMedium";
+    font-size: 30px;
+    font-weight: 400;
+    position: absolute;
+    margin: 0;
+}
+
+.blog p {
+    font-size: 20px;
+    font-family: "GothamBook";
+    font-weight: 700;
+}
+
+.fresh {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    margin-top: 5%;
+}
+
+
+.boxFresh {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.boxFresh p {
+    color: black;
+    align-items: left;
+    text-align: center;
+    margin-top: 5%;
+    width: 70%;
+    font-family: "GothamBook";
+    line-height: 25px;
+}
+
+.boxFresh h3 {
+    color: #da3d64;
+    text-align: center;
+    font-family: "GothamMedium";
+    font-weight: lighter;
+    margin-top: 5%;
+    width: 75%;
+}
+
+
+/* TABLETTE */
+  
 @media screen and (max-width: 1024px) {
 
     /* HEADER */
@@ -686,10 +850,85 @@ footer{
         font-size: 15px;
         line-height: 20px;
     }
+  
+    /* SECTION 1 AVEC LES DEUX PHOTOS */
+
+    .Tdiv1{
+        align-items: center;
+        flex-direction: column;
+    }
+    .Tdiv1 div{
+        width: 100%;
+    }
+    .Tdiv1 img{
+        width: 100%;
+    }
+    .Tdiv1 div p {
+        width: 50%;
+        margin: 5% 25% 0% 25%;
+        padding-bottom: 20px;
+        text-align: center;
+        font-size: 14px;
+        line-height: 20px;
+    }
+    .Tdiv1 div .Tpara{
+        width: 100%;
+        margin: 0;
+        padding-top: 20px;
+    }
+    .Tdiv1 div h2{
+        width: 100%;
+        margin: 0;
+        padding: 20px 0 20px 0;
+        text-align: center;
+    }
+
+    .Tdiv2{
+        align-items: center;
+        flex-direction: column;
+    }
+    .Tdiv2 div{
+        width: 100%;
+    }
+    .Tdiv2 img{
+        width: 100%;
+    }
+    .Tdiv2 div p {
+        width: 50%;
+        margin: 5% 25% 0% 25%;
+        padding-bottom: 20px;
+        text-align: center;
+        font-size: 14px;
+        line-height: 20px;
+    }
+    .Tdiv2 div .Tpara{
+        width: 100%;
+        margin: 0;
+        padding-top: 20px;
+    }
+    .Tdiv2 div h2{
+        width: 100%;
+        margin: 0;
+        padding: 20px 0 20px 0;
+        text-align: center;
+    }
+
+
+    /* SECTION 2 AVEC 4 ARTICLES */
+
+    .fresh{
+        flex-direction: column;
+    }
+    .boxFresh{
+        padding-bottom: 30px;
+    }
+    .boxFresh img{
+        width: 65%;
+    }
 }
 
 
-
+/* MOBILE */
 
 @media screen and (max-width: 500px) {
 
@@ -752,6 +991,33 @@ footer{
 
     #Nsection1{
         padding: 10px 0 10px 0;
+    }
+  
+  /* SECTION 1 AVEC LES DEUX PHOTOS */
+
+    .Tdiv1 div p {
+        width: 100%;
+        padding: 0 5% 5% 5%;
+        margin: 0;
+        font-size: 14px;
+    }
+    .Tdiv2 div p {
+        width: 100%;
+        padding: 0 5% 5% 5%;
+        margin: 0;
+        font-size: 14px;
+    }
+
+    /* SECTION 2 AVEC LES 4 ARTICLES */
+
+    .blog p {
+        text-align: center;
+    }
+    .boxFresh{
+        padding-bottom: 15px;
+    }
+    .boxFresh img{
+        width: 70%;
     }
 
     /* Section AVANT LE FOOTER */
