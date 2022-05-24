@@ -2,18 +2,22 @@
     src: url('../fonts/MyriadPro/Myriad\ Pro\ Regular.ttf');
     font-family: "Myriad Pro";
 }
+
 @font-face {
     src: url('../fonts/Gotham/GothamBold.ttf');
     font-family: "Gotham";
 }
+
 @font-face {
     font-family: "GothamBook";
     src: url('../fonts/Gotham/GothamBook.ttf');
 }
+
 @font-face {
     font-family: "GothamMedium";
     src: url('../fonts/Gotham/GothamMedium_1.ttf');
-  
+}
+
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
 
@@ -39,15 +43,12 @@ body a {
 }
 
 
-header{
+header {
     width: 100%;
     min-height: 100%;
-}
-header img {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    z-index: -5000;
+    background-image: url('../img/header/header.png');
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 /* NAV BAR */
@@ -56,7 +57,8 @@ header img {
 #Nhamburger-content {
     display: inline;
 }
-#Nhamburger{
+
+#Nhamburger {
     width: 100%;
     min-height: 100%;
 }
@@ -64,15 +66,26 @@ header img {
 #Nhamburger-content {
     width: 100%;
     height: 100px;
+    position: fixed;
     display: flex;
     justify-content: center;
     align-items: center;
-    background: transparent;
-    border-bottom: 4px solid rgba(255, 255, 255, 0.10);
+    border-bottom: 4px solid rgba(255, 255, 255, 0.20);
+    transition: all 0.2s ease-in-out;
 }
-.Nacslogo2{
+
+.navBackground {
+    z-index: 25000000;
+    backdrop-filter: blur(10px);
+    background: rgba(0, 0, 0, 0.316);
+    transition: all 2s;
+    transition: all 0.2s ease-in-out;
+}
+
+.Nacslogo2 {
     display: none;
 }
+
 .Nacslogo {
     width: 50px;
     height: 50px;
@@ -80,7 +93,7 @@ header img {
     display: flex;
     justify-content: center;
     align-self: center;
-    box-shadow: 9px 8px 0px -3px #F5F5F5;
+    box-shadow: 9px 8px 0px -3px #F5F5F590;
     margin-right: 10%;
 }
 
@@ -103,28 +116,40 @@ header img {
 }
 
 #Nhamburger-content ul a {
+    display: flex;
+    align-items: center;
+    height: 100%;
     text-decoration: none;
     list-style: none;
     color: #fff;
     font-size: 20px;
 }
 
-#Nhamburger-content li:hover {
-    border-bottom: 5px solid #D21242;
-    transition: all 0.2s ease-out;
-}
-
 #Nhamburger-content li {
-    height: 109%;
+    height: 75%;
     display: flex;
     justify-content: center;
     align-items: center;
     list-style: none;
+    transition: all 0.2s ease-in-out;
+    position: relative;
+    width: 10%;
 }
 
-#Nhamburger-content nav {
-    width: 50%;
-    height: 100px;
+#Nhamburger-content li::after {
+    content: '';
+    position: absolute;
+    display: block;
+    transition: all 0.2s ease-in-out;
+    width: 0;
+}
+
+#Nhamburger-content li:hover {
+    border-bottom: 5px solid #D21242;
+    transform: scale(1.5);
+}
+#Nhamburger-content a:hover {
+    color: #D21242;
 }
 
 #Nhamburger-content span {
@@ -142,24 +167,23 @@ header img {
 
 .NreseauNav1 a:hover {
     color: #D21242;
+    transform: scale(1.5)
 }
 
 #Nhamburger-button {
     display: none;
     position: absolute;
     top: 0;
-    right: 0;
+    right: 20px;
     color: #D21242;
     cursor: pointer;
-    background: none;
     border: none;
+    background: none;
     font-size: 30px;
     padding: 0;
-    margin: 20px;
     vertical-align: top;
     line-height: 47px;
     float: right;
-    margin-right: 25px;
     font-weight: bold;
 }
 
@@ -181,17 +205,6 @@ header img {
     float: right;
     margin-right: 25px;
     font-weight: bold;
-}
-
-#Nhamburger-overlay {
-    display: none;
-    position: fixed;
-    z-index: 1000000000;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, .4);
 }
 
 #Nhamburger-sidebar {
@@ -239,7 +252,7 @@ header img {
 
 /* Title + Scroll Down */
 
-.Ntitle{
+.Ntitle {
     width: 100%;
     height: 100%;
     display: flex;
@@ -247,16 +260,18 @@ header img {
     align-items: center;
     flex-direction: column;
     font-size: 80px;
-    color: #f5f5f5;
     z-index: -2;
+    color: #f5f5f5;
 }
-.Ntitle h2{
+
+.Ntitle h2 {
     font-family: "Gotham";
     font-size: 10rem;
     position: absolute;
     top: 25%;
 }
-.Ntitle p{
+
+.Ntitle p {
     font-size: 13px;
     line-height: 22px;
     color: #ffffff;
@@ -266,15 +281,18 @@ header img {
     position: absolute;
     bottom: 130px;
 }
-.Ntitle i{
+
+.Ntitle i {
     font-size: 20px;
     color: white;
     padding: 10px;
 }
-.Ntitle i:hover{
+
+.Ntitle i:hover {
     color: #D21242;
 }
-.Ntitle a{
+
+.Ntitle a {
     position: absolute;
     bottom: 80px;
     border: 1px solid #fff;
@@ -288,7 +306,8 @@ header img {
     transition: all 0.2s ease-in-out;
     text-decoration: none;
 }
-.Ntitle a:hover{
+
+.Ntitle a:hover {
     transform: rotate(180deg);
     color: #D21242;
     border: 1px solid #D21242;
@@ -296,7 +315,7 @@ header img {
 
 /* Section AGENCY */
 
-#Nsection1{
+#Nsection1 {
     width: 100%;
     min-height: 100%;
     background: #D21242;
@@ -306,11 +325,13 @@ header img {
     align-items: center;
     flex-direction: column;
 }
-.Ntitleawesome{
+
+.Ntitleawesome {
     display: grid;
     place-items: center;
 }
-.Ntitleawesome h1{
+
+.Ntitleawesome h1 {
     font-family: 'Roboto', sans-serif;
     font-size: 200px;
     color: #da3d64;
@@ -318,210 +339,46 @@ header img {
     margin: 0;
 }
 
-.Ntitleawesome h2{
+.Ntitleawesome h2 {
     font-family: "GothamBook";
     font-size: 30px;
     font-weight: 500;
     position: absolute;
 }
-.Nfeatureparent{
-    width:80%;
+
+.Nfeatureparent {
+    width: 80%;
     height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.Nfeature{
+
+.Nfeature {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
 }
-.Nfeature p{
+
+.Nfeature p {
     width: 80%;
     font-family: "GothamBook";
     font-size: 15px;
     line-height: 25px;
     text-align: center;
 }
-.Nfeature h2{
+
+.Nfeature h2 {
     font-family: "GothamMedium";
     font-weight: 400;
     font-size: 18px;
     margin-top: 30px;
 }
-.Nfeature i{
+
+.Nfeature i {
     font-size: 50px;
     color: #fff;
-}
-
-/* Section AVANT LE FOOTER */
-
-#Nsectionavant{
-    width: 100%;
-    height: 35%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
-    background: #9d9d9d;
-    font-size: 15px;
-}
-#Nsectionavant p{
-    width: 55%;
-    font-family: "GothamBook";
-    margin: 0;
-    line-height: 25px;
-}
-#Nsectionavant img{
-    width: 7%;
-    margin: 20px;
-}
-.Navant{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
-    margin-top: 5%;
-}
-
-footer{
-    width: 100%;
-    height: 15%;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-direction: row;
-    font-family: 'Roboto', sans-serif;
-    background-color: #222222;
-    color: #fff;
-    font-size: 15px;
-}
-
-/* LOADER */
-
-#Nparents{
-    width: 100%;
-    height: 100vh;
-    position: fixed;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    z-index: 500000000000;
-    background: #D21242;
-}
-.container{
-    position: relative;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.container .ring{
-    position: relative;
-    width: 150px;
-    height: 150px;
-    margin: -30px;
-    border-radius: 50%;
-    border: 4px solid transparent;
-    border-top: 4px solid #9d9d9d;
-    animation: animate 4s linear infinite;
-}
-@keyframes animate{
-    0%
-    {
-        transform: rotate(0deg);
-    }
-    100%
-    {
-        transform: rotate(360deg);
-    }
-}
-
-.container .ring:before{
-    content: '';
-    position: absolute;
-    top: 12px;
-    right: 12px;
-    border-radius: 50%;
-    width: 15px;
-    height: 15px;
-    background: #9d9d9d;
-    box-shadow: 0 0 0 5px #9d9d9d33,
-    0 0 0 10px #9d9d9d22,
-    0 0 0 20px #9d9d9d11,
-    0 0 20px #9d9d9d,
-    0 0 50px #9d9d9d;
-}
-
-.container .ring:nth-child(2){
-    animation: animate2 4s linear infinite;
-    animation-delay: -1s;
-    border-top: 4px solid transparent;
-    border-left: 4px solid #F3F3F3;
-}
-.container .ring:nth-child(2):before{
-    content: '';
-    position: absolute;
-    top: initial;
-    bottom: 12px;
-    left: 12px;
-    border-radius: 50%;
-    width: 15px;
-    height: 15px;
-    background: #F3F3F3;
-    box-shadow: 0 0 0 5px #F3F3F333,
-    0 0 0 10px #F3F3F322,
-    0 0 0 20px #F3F3F311,
-    0 0 20px #F3F3F3,
-    0 0 50px #F3F3F3;
-}
-
-@keyframes animate2{
-    0%
-    {
-        transform: rotate(360deg);
-    }
-    100%
-    {
-        transform: rotate(0deg);
-    }
-}
-
-.container .ring:nth-child(3){
-    animation: animate2 4s linear infinite;
-    animation-delay: -3s;
-    position: absolute;
-    top: -66.66px;
-    border-top: 4px solid transparent;
-    border-left: 4px solid #222222;
-}
-
-.container .ring:nth-child(3):before{
-    content: '';
-    position: absolute;
-    top: initial;
-    bottom: 12px;
-    left: 12px;
-    border-radius: 50%;
-    width: 15px;
-    height: 15px;
-    background: #222222;
-    box-shadow: 0 0 0 5px #22222233,
-    0 0 0 10px #22222222,
-    0 0 0 20px #22222211,
-    0 0 20px #222222,
-    0 0 50px #222222;
-}
-
-.container p{
-    position: absolute;
-    color: #fff;
-    font-size: 1.5em;
-    font-family: "GothamMedium";
-    bottom: -100px;
-    letter-spacing: 0.15em;
 }
 
 /* Section avec les 2 images */
@@ -536,21 +393,25 @@ footer{
 }
 
 .Tdiv1 {
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: row-reverse;
     background-color: #222222;
 }
+
 .Tdiv1 div {
     width: 50%;
 }
+
 .Tdiv1 div .Tpara {
     width: 50%;
     margin: 0;
     margin-left: 20%;
     font-family: "GothamBook";
 }
+
 .Tdiv1 div p {
     width: 50%;
     color: white;
@@ -559,6 +420,7 @@ footer{
     margin-left: 20%;
     font-family: "GothamBook";
 }
+
 .Tdiv1 div h2 {
     width: 50%;
     color: white;
@@ -566,27 +428,32 @@ footer{
     margin-left: 20%;
     font-family: "GothamMedium";
 }
+
 .Tdiv1 img {
     width: 50%;
 }
 
 
 .Tdiv2 {
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: row;
     background-color: #f3f3f3;
 }
+
 .Tdiv2 div {
     width: 50%;
 }
+
 .Tdiv2 div .Tpara {
     width: 50%;
     margin: 0;
     margin-left: 10%;
     font-family: "GothamBook";
 }
+
 .Tdiv2 div p {
     width: 50%;
     color: rgb(0, 0, 0);
@@ -596,6 +463,7 @@ footer{
     margin-right: 20%;
     font-family: "GothamBook";
 }
+
 .Tdiv2 div h2 {
     width: 50%;
     color: rgb(0, 0, 0);
@@ -604,11 +472,25 @@ footer{
     margin-right: 20%;
     font-family: "GothamMedium";
 }
+
 .Tdiv2 img {
     width: 50%;
 }
 
 /* SECTION BLOG */
+
+.modal {
+    width: 100%;
+    height: 100%;
+    display: none;
+    position: fixed;
+    z-index: 2500000;
+    top: 0;
+    left: 0;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+}
 
 #sectionBlog {
     width: 100%;
@@ -656,13 +538,17 @@ footer{
     margin-top: 5%;
 }
 
-
 .boxFresh {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     gap: 20px;
+    padding-bottom: 20px;
+}
+
+.boxFresh:nth-child(2) img {
+    width: 293px;
 }
 
 .boxFresh p {
@@ -684,42 +570,218 @@ footer{
     width: 75%;
 }
 
+/* LOADER */
+
+#Nparents {
+    width: 100%;
+    min-height: 100vh;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 50000000000002022222222222;
+    background: #D21242;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container .ring {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    margin: -30px;
+    border-radius: 50%;
+    border: 4px solid transparent;
+    border-top: 4px solid #9d9d9d;
+    animation: animate 4s linear infinite;
+}
+
+@keyframes animate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.container .ring:before {
+    content: '';
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+    background: #9d9d9d;
+    box-shadow: 0 0 0 5px #9d9d9d33,
+        0 0 0 10px #9d9d9d22,
+        0 0 0 20px #9d9d9d11,
+        0 0 20px #9d9d9d,
+        0 0 50px #9d9d9d;
+}
+
+.container .ring:nth-child(2) {
+    animation: animate2 4s linear infinite;
+    animation-delay: -1s;
+    border-top: 4px solid transparent;
+    border-left: 4px solid #F3F3F3;
+}
+
+.container .ring:nth-child(2):before {
+    content: '';
+    position: absolute;
+    top: initial;
+    bottom: 12px;
+    left: 12px;
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+    background: #F3F3F3;
+    box-shadow: 0 0 0 5px #F3F3F333,
+        0 0 0 10px #F3F3F322,
+        0 0 0 20px #F3F3F311,
+        0 0 20px #F3F3F3,
+        0 0 50px #F3F3F3;
+}
+
+@keyframes animate2 {
+    0% {
+        transform: rotate(360deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+.container .ring:nth-child(3) {
+    animation: animate2 4s linear infinite;
+    animation-delay: -3s;
+    position: absolute;
+    top: -66.66px;
+    border-top: 4px solid transparent;
+    border-left: 4px solid #222222;
+}
+
+.container .ring:nth-child(3):before {
+    content: '';
+    position: absolute;
+    top: initial;
+    bottom: 12px;
+    left: 12px;
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+    background: #222222;
+    box-shadow: 0 0 0 5px #22222233,
+        0 0 0 10px #22222222,
+        0 0 0 20px #22222211,
+        0 0 20px #222222,
+        0 0 50px #222222;
+}
+
+.container p {
+    position: absolute;
+    color: #fff;
+    font-size: 1.5em;
+    font-family: "GothamMedium";
+    bottom: -100px;
+    letter-spacing: 0.15em;
+}
+
+/* Section AVANT LE FOOTER */
+
+#Nsectionavant {
+    width: 100%;
+    height: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    background: #D21242;
+    font-size: 15px;
+}
+
+#Nsectionavant p {
+    width: 55%;
+    font-family: "GothamBook";
+    margin: 0;
+    line-height: 25px;
+    color: #F3F3F3;
+}
+
+#Nsectionavant img {
+    width: 7%;
+    margin: 20px;
+}
+
+.Navant {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+/* FOOTER */
+
+footer {
+    width: 100%;
+    height: 15%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+    font-family: 'Roboto', sans-serif;
+    background-color: #222222;
+    color: #fff;
+    font-size: 15px;
+}
 
 /* TABLETTE */
-  
+
 @media screen and (max-width: 1024px) {
 
     /* HEADER */
 
-    header img{
+    header img {
         display: none;
     }
-    header{
+
+    header {
         background-image: url('../img/header/header.png');
-        background-size: auto;
-    }
-    .Ntitle h2 {
-        top: 35%;
+        background-size: cover;
+        background-repeat: no-repeat;
     }
 
     /* NAV BAR */
 
     #Nhamburger-content {
-        display: none;
+        height: 130px;
+    }
+
+    #Nhamburger-content * {
+        display: none !important;
     }
 
     #Nhamburger-button,
     #Nhamburger-sidebar,
     #Nhamburger-button-close,
-    .Nhamburger-activated #Nhamburger-overlay {
+    .Nhamburger-activated {
         display: block;
     }
 
     #Nhamburger-button,
     #Nhamburger-sidebar,
     #Nhamburger-button-close,
-    .Nhamburger-activated,
-    #Nhamburger-overlay>i {
+    .Nhamburger-activated>i {
         display: block;
     }
 
@@ -753,9 +815,12 @@ footer{
     }
 
     #Nhamburger-button {
-        margin: 25px;
+        margin-top: 40px;
         position: fixed;
         color: #F3F3F3;
+        z-index: 50000000;
+        color: #777777;
+        font-size: 50px;
     }
 
     .NreseauNav1 {
@@ -772,23 +837,27 @@ footer{
         text-decoration: none;
         color: #D21242;
     }
-    .Nacslogo2{
+
+    .Nacslogo2 {
         display: block;
-        width: 100px;
-        height: 100px;
+        width: 80px;
+        height: 80px;
         background: #D21242;
         display: flex;
         justify-content: center;
         align-self: center;
-        box-shadow: 15px 15px 0px -4px #F5F5F5;
-        position: absolute;
-        top: 25px;
+        box-shadow: 15px 15px 0px -4px #F5F5F590;
+        z-index: 50000000;
+        position: fixed;
+        top: 15px;
         left: 25px
     }
+
     .Nacslogo2 h2 {
         font-family: 'Roboto', sans-serif;
         color: #fff;
-        font-size: 40px;
+        font-size: 35px;
+        margin-top: 20px;
     }
 
 
@@ -813,56 +882,73 @@ footer{
 
     /* Title + Scroll Down */
 
-    .Ntitle h2{
+    .Ntitle h2 {
         font-size: 6rem;
+        top: 35%;
     }
-    .Ntitle p{
+
+    .Ntitle p {
         font-size: 15px;
     }
 
     /* Section AGENCY */
 
-    .Ntitleawesome{
+    .Ntitleawesome {
         margin-top: 10%;
     }
-    .Nfeatureparent{
+
+    .Nfeatureparent {
         display: grid;
         gap: 30px;
     }
-    .Nfeature h2{
+
+    .Nfeature h2 {
         text-align: center;
     }
-    .Nfeature p{
+
+    .Nfeature p {
         width: 80%;
+    }
+
+    /* BLOG */
+
+    .boxFresh:nth-child(2) img {
+        width: 65%;
     }
 
     /* Section AVANT LE FOOTER */
 
-    #Nsectionavant p{
+    #Nsectionavant p {
         width: 80%;
     }
-    #Nsectionavant img{
+
+    #Nsectionavant img {
         width: 10%;
     }
-    .Navant{
+
+    .Navant {
         flex-direction: column;
         text-align: center;
         font-size: 15px;
         line-height: 20px;
     }
-  
+
     /* SECTION 1 AVEC LES DEUX PHOTOS */
 
-    .Tdiv1{
+    .Tdiv1 {
         align-items: center;
         flex-direction: column;
     }
-    .Tdiv1 div{
+
+    .Tdiv1 div {
+        width: 100%;
+        padding: 10px 0 10px 0;
+    }
+
+    .Tdiv1 img {
         width: 100%;
     }
-    .Tdiv1 img{
-        width: 100%;
-    }
+
     .Tdiv1 div p {
         width: 50%;
         margin: 5% 25% 0% 25%;
@@ -871,28 +957,34 @@ footer{
         font-size: 14px;
         line-height: 20px;
     }
-    .Tdiv1 div .Tpara{
+
+    .Tdiv1 div .Tpara {
         width: 100%;
         margin: 0;
         padding-top: 20px;
     }
-    .Tdiv1 div h2{
+
+    .Tdiv1 div h2 {
         width: 100%;
         margin: 0;
         padding: 20px 0 20px 0;
         text-align: center;
     }
 
-    .Tdiv2{
+    .Tdiv2 {
         align-items: center;
         flex-direction: column;
     }
-    .Tdiv2 div{
+
+    .Tdiv2 div {
+        width: 100%;
+        padding: 10px 0 10px 0;
+    }
+
+    .Tdiv2 img {
         width: 100%;
     }
-    .Tdiv2 img{
-        width: 100%;
-    }
+
     .Tdiv2 div p {
         width: 50%;
         margin: 5% 25% 0% 25%;
@@ -901,12 +993,14 @@ footer{
         font-size: 14px;
         line-height: 20px;
     }
-    .Tdiv2 div .Tpara{
+
+    .Tdiv2 div .Tpara {
         width: 100%;
         margin: 0;
         padding-top: 20px;
     }
-    .Tdiv2 div h2{
+
+    .Tdiv2 div h2 {
         width: 100%;
         margin: 0;
         padding: 20px 0 20px 0;
@@ -916,13 +1010,15 @@ footer{
 
     /* SECTION 2 AVEC 4 ARTICLES */
 
-    .fresh{
+    .fresh {
         flex-direction: column;
     }
-    .boxFresh{
+
+    .boxFresh {
         padding-bottom: 30px;
     }
-    .boxFresh img{
+
+    .boxFresh img {
         width: 65%;
     }
 }
@@ -934,13 +1030,16 @@ footer{
 
     /* HEADER */
 
-    header img{
+    header img {
         display: none;
     }
-    header{
+
+    header {
         background-image: url('../img/header/header.png');
-        background-size: auto;
+        background-size: cover;
+        background-repeat: no-repeat;
     }
+
     .Ntitle h2 {
         top: 40%;
     }
@@ -948,19 +1047,25 @@ footer{
     /* NAV BAR */
 
     #Nhamburger-button {
-        z-index: 5;
+        z-index: 50000000;
         position: fixed;
-        color: #F3F3F3;
+        color: #777777;
+        font-size: 30px;
+        margin-top: 20px;
     }
 
-    .Nacslogo2{
-        width: 80px;
-        height: 80px;
+    .Nacslogo2 {
+        width: 50px;
+        height: 50px;
+        box-shadow: 12px 12px 0px -4px #f5f5f590;
     }
+
     .Nacslogo2 h2 {
         font-family: 'Roboto', sans-serif;
         color: #fff;
-        font-size: 30px;
+        font-size: 20px;
+        margin-top: 15px;
+        padding: 0;
     }
 
     .Nacslogo {
@@ -971,29 +1076,37 @@ footer{
 
     /* Title + Scroll Down */
 
-    .Ntitle h2{
+    .Ntitle h2 {
         font-size: 3rem;
         top: 35%;
     }
 
     /* Section AGENCY */
 
-    .Ntitleawesome{
+    .Ntitleawesome {
         margin-top: 5%;
     }
-    .Ntitleawesome h1{
+
+    .Ntitleawesome h1 {
         font-size: 160px;
     }
-    .Ntitleawesome h2{
+
+    .Ntitleawesome h2 {
         font-size: 20px;
         text-align: center;
     }
 
-    #Nsection1{
+    #Nsection1 {
         padding: 10px 0 10px 0;
     }
-  
-  /* SECTION 1 AVEC LES DEUX PHOTOS */
+
+    /* BLOG */
+
+    .boxFresh:nth-child(2) img {
+        width: 65%;
+    }
+
+    /* SECTION 1 AVEC LES DEUX PHOTOS */
 
     .Tdiv1 div p {
         width: 100%;
@@ -1001,6 +1114,7 @@ footer{
         margin: 0;
         font-size: 14px;
     }
+
     .Tdiv2 div p {
         width: 100%;
         padding: 0 5% 5% 5%;
@@ -1013,27 +1127,32 @@ footer{
     .blog p {
         text-align: center;
     }
-    .boxFresh{
+
+    .boxFresh {
         padding-bottom: 15px;
     }
-    .boxFresh img{
+
+    .boxFresh img {
         width: 70%;
     }
 
     /* Section AVANT LE FOOTER */
 
-    #Nsectionavant{
-        height: 60%;
+    #Nsectionavant {
+        height: 70%;
         flex-direction: column;
         padding: 0px 0 15px 0;
     }
-    #Nsectionavant p{
+
+    #Nsectionavant p {
         width: 90%;
     }
-    #Nsectionavant img{
+
+    #Nsectionavant img {
         width: 15%;
     }
-    .Navant{
+
+    .Navant {
         flex-direction: column;
         text-align: center;
         font-size: 15px;
@@ -1042,11 +1161,12 @@ footer{
 
     /* FOOTER */
 
-    footer{
+    footer {
         height: 20%;
         flex-direction: column;
     }
-    footer p{
+
+    footer p {
         text-align: center;
     }
 }
