@@ -1,21 +1,21 @@
 @font-face {
-    src: url('../fonts/MyriadPro/Myriad\ Pro\ Regular.ttf');
+    src: url('../fonts/MyriadPro/myriadpro-regular.otf');
     font-family: "Myriad Pro";
 }
 
 @font-face {
-    src: url('../fonts/Gotham/GothamBold.ttf');
+    src: url('../fonts/Gotham/Gotham-Bold.otf');
     font-family: "Gotham";
 }
 
 @font-face {
     font-family: "GothamBook";
-    src: url('../fonts/Gotham/GothamBook.ttf');
+    src: url('../fonts/Gotham/Gotham-Book.otf');
 }
 
 @font-face {
     font-family: "GothamMedium";
-    src: url('../fonts/Gotham/GothamMedium_1.ttf');
+    src: url('../fonts/Gotham/Gotham-Medium.otf');
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
